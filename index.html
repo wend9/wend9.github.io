@@ -21,18 +21,7 @@ function send_with_ajax( ){
         xhr.open("GET", "wend9.github.io/MC_Kleiner_Panda.JPEG", true);
         xhr.send(null);
 
-        xhr.onreadystatechange = function() {
-		    if (xhr.readyState == 4){
-		        if ((xhr.status == 200) || (xhr.status == 0)){
-		            var image = document.getElementById("get_img");
-		            image.src = "data:image/gif;base64,";
-		        }else{
-		            alert("Something misconfiguration : " +
-		            	"\nError Code : " + xhr.status +
-		            	"\nError Message : " + xhr.responseText);
-		        }
-		    }
-		};
+        
     }
 
   </script>
