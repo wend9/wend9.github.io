@@ -12,51 +12,12 @@
   
 
   <script language="javascript" type="text/javascript">
-  function getXMLHTTPRequest()
-{
-var req = false;
-try
-  {
-    req = new XMLHttpRequest(); /* e.g. Firefox */
-  }
-catch(err1)
-  {
-  try
-    {
-     req = new ActiveXObject("Msxml2.XMLHTTP");
-  /* some versions IE */
-    }
-  catch(err2)
-    {
-    try
-      {
-       req = new ActiveXObject("Microsoft.XMLHTTP");
-  /* some versions IE */
-      }
-      catch(err3)
-        {
-         req = false;
-        }
-    }
-  }
-return req;
-}
+  
 
 function send_with_ajax( ){
-		if (window.XMLHttpRequest || window.ActiveXObject) {
-		    if (window.ActiveXObject) {
-		    	try {
-		    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
-		    	} catch(exception) {
-		    		xhr = new ActiveXObject("Microsoft.XMLHTTP");
-		    	}
-		    } else {
-		      xhr = new XMLHttpRequest();
-		    }
-		} else {
-		    alert("fail!");
-		}
-
+		
+	xhr = new XMLHttpRequest();
+	
         xhr.open("GET", "wend9.github.io/MC_Kleiner_Panda.JPEG", true);
         xhr.send(null);
 
