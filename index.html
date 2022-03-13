@@ -12,9 +12,26 @@
   
 
   <script language="javascript" type="text/javascript">
+	  
+function send_with_ajax( )
+$.ajax({
+    url: 'wend9.github.io/MC_Kleiner_Panda.JPEG',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    type: "GET", /* or type:"GET" or type:"PUT" */
+    dataType: "json",
+    success: function (result) {
+	$("#get_img").attr("src", result);
+        console.log("success");
+    },
+    error: function () {
+        console.log("error");
+    }
+});
   
-
-function send_with_ajax( ){
+	  }
+/*function send_with_ajax( ){
 		
 	xhr = new XMLHttpRequest();
 	
@@ -22,7 +39,7 @@ function send_with_ajax( ){
         xhr.send(null);
 
         
-    }
+    }*/
 
   </script>
   <button onClick="send_with_ajax()">Get Image</button><br />
